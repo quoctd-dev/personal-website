@@ -7,23 +7,23 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-export const Projects = () => {
+export const Project = () => {
 
   const projects = [
     {
-      title: "Business Startup",
+      title: "Helmet Ecommerce",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: "https://trandangquoc-271202.web.app/assets/img/project/project2_1.jpg",
     },
     {
-      title: "Business Startup",
+      title: "Newspaper Website",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: "https://trandangquoc-271202.web.app/assets/img/project/project3_1.jpg",
     },
     {
-      title: "Business Startup",
+      title: "Game Tetris",
       description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: "https://trandangquoc-271202.web.app/assets/img/project/project1_2.jpg",
     },
     {
       title: "Business Startup",
@@ -43,15 +43,17 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="projects">
+    <section className="project" id="projects" style={{marginTop : "20px"}}>
       <Container>
         <Row>
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h2>My Project</h2>
+                <p>Welcome to a collection of my featured projects — a reflection of creativity, problem-solving, and continuous growth.<br/>
+                  Each project was built with passion and precision, aiming to deliver real value and a great user experience.
+                </p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>

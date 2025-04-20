@@ -6,9 +6,42 @@ import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 export const Skills = () => {
-  const responsive = {
+    const itemData = [
+        {
+            img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+            title: 'Breakfast',
+        },
+        {
+            img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+            title: 'Burger',
+        },
+        {
+            img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+            title: 'Breakfast',
+        },
+        {
+            img: 'https://trandangquoc-271202.web.app/assets/img/portfolio/picture9.jpg',
+            title: 'Breakfast',
+        },
+        {
+            img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+            title: 'Breakfast',
+        },
+        {
+            img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+            title: 'Breakfast',
+        },{
+            img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+            title: 'Breakfast',
+        },
+
+    ];
+
+    const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
@@ -59,6 +92,18 @@ export const Skills = () => {
             </div>
         </div>
         <img className="background-image-left" src={colorSharp} alt="Image" />
+        <ImageList variant="masonry" cols={3} gap={8}>
+            {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                    <img
+                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        src={`${item.img}?w=248&fit=crop&auto=format`}
+                        alt={item.title}
+                        loading="lazy"
+                    />
+                </ImageListItem>
+            ))}
+        </ImageList>
     </section>
   )
 }
